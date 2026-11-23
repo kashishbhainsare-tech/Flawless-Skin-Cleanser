@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Flawless - Skin Cleanser</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section class="hero text-white">
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg pt-3">
+
+            <div class="container px-5">
+
+                <!-- LOGO -->
+                <a class="navbar-brand text-white fs-2 fw-light" href="index.html">
+                    <img src="./images/logo/logo.png" alt="Flawless Logo">
+                </a>
+
+                <!-- TOGGLER -->
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
+                    aria-label="Toggle navigation">
+
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- MENU -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+
+                    <ul class="navbar-nav mx-auto gap-lg-3">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="index.html">HOME</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="shop.html">SHOP</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="about.html">ABOUT</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="contact.html">CONTACT</a>
+                        </li>
+
+                    </ul>
+
+                    <!-- RIGHT SIDE -->
+                    <div class="d-flex align-items-center gap-4">
+
+                        <a href="user.html" class="text-white text-decoration-none">
+                            <i class="bi bi-person-fill fs-4"></i>
+                        </a>
+
+                        <!-- CART TOTAL PRICE -->
+                        <span id="cartPrice" class="text-white fw-bold" style="cursor:pointer;"></span>
+
+                        <!-- CART -->
+                        <div class="position-relative" id="cartBtn" style="cursor:pointer;">
+
+                            <i class="bi bi-bag-fill fs-4"></i>
+
+                            <span id="cartCount"
+                                class="position-absolute top-0 start-100 translate-middle badge rounded-circle bg-white text-dark">
+                                0
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </nav>
+
+
+        <!-- HERO CONTENT -->
+        <div class="container-fluid px-4">
+
+            <div class="row">
+
+                <div class="col-lg-8 mt-4 pt-5 px-4 hero-content">
+
+                    <p class="mb-4 home-welcome-text">
+                        WELCOME TO FLAWLESS STORE
+                    </p>
+
+                    <p class="home-fontstyle mb-5">
+                        The Best Skin<br>
+                        Cleanser for You
+                    </p>
+
+                    <a href="shop.html" class="btn btn-light text-danger px-3 rounded-1 shop-btn">
+                        SHOP NOW
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- GAP AFTER HERO -->
+    <div class="product-new-gap"></div>
+
+
+    <!-- ================= NEW ARRIVALS ================= -->
+<!-- ================= NEW ARRIVALS ================= -->
+
+<section class="py-5 bg-white new-arrivals-section">
+
+    <div class="container-fluid px-4 px-lg-5">
+
+        <div class="d-flex justify-content-between align-items-center pt-5 pb-5">
+
+            <h2 class="display-5 fw-light mb-0 new-arrivals-title">
+                New Arrivals
+            </h2>
+
+            <a href="shop.html" class="btn shop-now-btn">
+                SHOP NOW
+            </a>
+
+        </div>
+
+        <div class="row g-4" id="newArrivals"></div>
+
+    </div>
+
+</section>
+
+
+    <!-- BIG GAP BETWEEN PRODUCTS AND GLOW -->
+
+    <div class="product-glow-gap"></div>
+
+
+    <!-- ================= GLOW NATURALLY ================= -->
+
+    <section class="glow-section">
+
+        <div class="container-fluid px-4 px-lg-5">
+
+            <div class="row align-items-center glow-row">
+
+                <!-- IMAGE -->
+
+                <div class="col-lg-6">
+
+                    <img src="images/hero/hero-img2.png" class="img-fluid rounded-3 glow-image"
+                        alt="Flawless Skin Care">
+
+                </div>
+
+
+                <!-- TEXT -->
+
+                <div class="col-lg-6 glow-text">
+
+                    <div class="glow-line"></div>
+
+                    <h2 class="fw-light mb-4">
+                        Glow Naturally with<br>
+                        Flawless
+                    </h2>
+
+                    <p class="text-secondary lh-lg mb-4">
+
+                        Say hello to radiant, healthy skin with Flawless – your
+                        go-to skincare solution crafted to nourish, protect, and
+                        enhance your natural beauty. Made with gentle, effective
+                        ingredients, Flawless is designed for all skin types and
+                        concerns, helping you achieve clear, smooth, and glowing
+                        skin every day. Whether you’re battling blemishes,
+                        dryness, or dullness, Flawless brings balance and
+                        confidence back to your skincare routine.
+
+                    </p>
+
+                    <a href="about.html" class="btn btn-danger read-more-btn">
+                        READ MORE
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FEATURES ================= -->
+
+    <section class="features-section">
+
+        <div class="container-fluid">
+
+            <div class="row text-center justify-content-center">
+
+                <!-- All Skin Types -->
+                <div class="col-lg-4 col-md-4 col-12 feature-item">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-hand-sparkles"></i>
+                    </div>
+
+                    <h3>All Skin Types</h3>
+
+                    <p>
+                        Its gentle yet effective formula works in harmony with all skin types.
+                    </p>
+
+                </div>
+
+
+                <!-- Pure Organic -->
+                <div class="col-lg-4 col-md-4 col-12 feature-item">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+
+                    <h3>Pure Organic</h3>
+
+                    <p>
+                        Every drop of Flawless is packed with organic, plant-based goodness.
+                    </p>
+
+                </div>
+
+
+                <!-- Natural Care -->
+                <div class="col-lg-4 col-md-4 col-12 feature-item">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+
+                    <h3>Natural Care</h3>
+
+                    <p>
+                        Rooted in nature, Flawless provides clean, natural care that restores your beauty.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- ================= SKINCARE REGIMEN ================= -->
+    <section class="text-center text-white" style="
+    background-image: linear-gradient(
+        rgba(37,26,29,.85),
+        rgba(45,30,34,.85)
+    ),
+    url('images/hero/video-img.jpg');
+
+    background-size: cover;
+    background-position: center;
+
+    height: 450px;
+    min-height: 0;
+    padding: 0;
+">
+
+        <div class="container h-100">
+
+            <div class="row h-100 justify-content-center align-items-center">
+
+                <div class="col-lg-8">
+
+                    <h2 class="display-5 fw-light mb-4" style="font-size: 45px;">
+                        Flawless Skincare Regimen
+                    </h2>
+                    <p class="mb-5" style="font-size: 13px;">
+                        Glowing skin starts with the right steps.
+                        Watch how Flawless fits into your daily routine.
+                    </p>
+
+                    <a href="#" class="btn video-btn text-white fw-semibold px-5 py-3" style="font-size: 14px;">
+
+                        WATCH THE VIDEOS
+                        <i class="fa-brands fa-youtube ms-2"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- MOST LOVED BY CUSTOMERS -->
+
+    <section class="py-5 bg-white">
+
+        <div class="container-fluid px-4 px-lg-5">
+
+            <div class="text-center pt-5 pb-5">
+
+                <h2 class="display-5 fw-light mb-3">
+                    Most Loved by the Customers
+                </h2>
+
+                <p class="text-secondary fs-6 mb-4">
+                    Meet the favorite—loved by thousands, trusted for flawless results.
+                </p>
+
+            </div>
+
+            <div class="row g-4" id="mostLovedProducts"></div>
+
+        </div>
+
+    </section>
+
+    <div class="py-5 my-5"></div>
+
+    <!-- ================= CUSTOMER REVIEWS ================= -->
+
+    <section class="customer-reviews">
+
+        <div class="container-fluid px-4 px-lg-5">
+
+            <!-- HEADING -->
+            <div class="text-center reviews-heading">
+                <h4 class="fw-light display-5 mb-0">
+                    What Our Customers Say
+                </h4>
+            </div>
+
+            <!-- REVIEWS -->
+            <div class="row text-center">
+
+                <!-- REVIEW 1 -->
+                <div class="col-lg-4 col-md-4 col-12 mb-4">
+
+                    <div class="review-stars mb-3">
+                        ★★★★★
+                    </div>
+
+                    <p class="review-text">
+                        Tried so many products, but nothing
+                        made my skin feel as healthy as
+                        Flawless. It’s now a permanent part of
+                        my daily routine!
+                    </p>
+
+                    <img src="images/about/Isla.png" class="rounded-circle review-image" alt="Jennifer Lewis">
+
+                    <p class="review-name">
+                        JENNIFER LEWIS
+                    </p>
+
+                </div>
+
+                <!-- REVIEW 2 -->
+                <div class="col-lg-4 col-md-4 col-12 mb-4">
+
+                    <div class="review-stars mb-3">
+                        ★★★★★
+                    </div>
+
+                    <p class="review-text">
+                        Flawless truly lives up to its name. My
+                        skin feels softer, looks brighter, and I’ve
+                        received so many compliments.
+                    </p>
+
+                    <img src="images/about/Rhea.png" class="rounded-circle review-image" alt="Alicia Heart">
+
+                    <p class="review-name">
+                        ALICIA HEART
+                    </p>
+
+                </div>
+
+                <!-- REVIEW 3 -->
+                <div class="col-lg-4 col-md-4 col-12">
+
+                    <div class="review-stars mb-3">
+                        ★★★★★
+                    </div>
+
+                    <p class="review-text">
+                        Within a week, I could see and feel
+                        the difference—less dryness, fewer
+                        breakouts, and a real glow.
+                    </p>
+
+                    <img src="images/about/Steven.png" class="rounded-circle review-image" alt="Juan Carlos">
+
+                    <p class="review-name">
+                        JUAN CARLOS
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= FOLLOW US ================= -->
+
+    <section class="follow-us">
+
+        <div class="container-fluid px-4 px-lg-5">
+
+            <div class="follow-us-content">
+
+                <h2 class="fw-light fs-3 mb-5">
+                    Follow Us
+                </h2>
+
+                <a href="#" class="text-dark fs-4">
+                    @flawlesscleanser
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOLLOW SECTION ================= -->
+    <section class="bg-white py-5">
+
+        <div class="container about-gallery-container">
+
+            <!-- IMAGES -->
+            <div class="row gallery-row">
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="images/testimonials/user-1.png" class="img-fluid gallery-img rounded" alt="Skincare">
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="images/testimonials/user-2.png" class="img-fluid gallery-img rounded" alt="Skincare">
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="images/testimonials/user-3.png" class="img-fluid gallery-img rounded" alt="Skincare">
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="images/testimonials/user-4.png" class="img-fluid gallery-img rounded" alt="Skincare">
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="images/testimonials/user-5.png" class="img-fluid gallery-img rounded" alt="Skincare">
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <img src="images/testimonials/user-6.png" class="img-fluid gallery-img rounded" alt="Skincare">
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ================= SERVICE FEATURES ================= -->
+
+    <section class="service-features">
+
+        <div class="container">
+
+            <div class="row text-center">
+
+                <!-- FREE DELIVERY -->
+                <div class="col-lg-3 col-md-6 col-12">
+
+                    <div class="service-icon">
+                        <i class="bi bi-truck"></i>
+                    </div>
+
+                    <h6 class="service-title">
+                        FREE DELIVERY
+                    </h6>
+
+                    <p class="service-description">
+                        Fast & free delivery
+                    </p>
+
+                </div>
+
+
+                <!-- EASY PAYMENT -->
+                <div class="col-lg-3 col-md-6 col-12">
+
+                    <div class="service-icon">
+                        <i class="bi bi-credit-card"></i>
+                    </div>
+
+                    <h6 class="service-title">
+                        EASY PAYMENT
+                    </h6>
+
+                    <p class="service-description">
+                        Multiple payment options
+                    </p>
+
+                </div>
+
+
+                <!-- TRACK ORDER -->
+                <div class="col-lg-3 col-md-6 col-12">
+
+                    <div class="service-icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+
+                    <h6 class="service-title">
+                        TRACK ORDER
+                    </h6>
+
+                    <p class="service-description">
+                        Real-time order tracking
+                    </p>
+
+                </div>
+
+
+                <!-- HAVE QUESTIONS -->
+                <div class="col-lg-3 col-md-6 col-12">
+
+                    <div class="service-icon">
+                        <i class="bi bi-question-circle-fill"></i>
+                    </div>
+
+                    <h6 class="service-title">
+                        HAVE QUESTIONS?
+                    </h6>
+
+                    <p class="service-description">
+                        We're here to help
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container-fluid px-4 px-lg-5 footer-main">
+
+            <div class="row footer-row">
+
+                <!-- ABOUT -->
+                <div class="col-lg-3 col-md-6 col-12 footer-about">
+
+                    <h3 class="footer-logo mb-4">
+                        <img src="images/logo/logo.png" alt="Flawless">
+                    </h3>
+
+                    <p class="footer-about-text mb-4">
+                        It’s a promise of clean, effective, and gentle
+                        care for every skin type. Rooted in nature
+                        and powered by purity, our products are
+                        crafted to nourish your skin and reveal its
+                        natural glow.
+                    </p>
+
+                    <div class="footer-social d-flex gap-4">
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+                <div class="col-lg-3 col-md-6 col-12">
+
+                    <h3 class="footer-heading mb-4">
+                        Quick Links
+                    </h3>
+
+                    <p class="footer-link">Home</p>
+                    <p class="footer-link">Shop</p>
+                    <p class="footer-link">About</p>
+                    <p class="footer-link mb-0">Contact</p>
+
+                </div>
+
+
+                <!-- CATEGORIES -->
+                <div class="col-lg-3 col-md-6 col-12">
+
+                    <h3 class="footer-heading mb-4">
+                        Categories
+                    </h3>
+
+                    <p class="footer-link">Body Lotion</p>
+                    <p class="footer-link">Sunscreen</p>
+                    <p class="footer-link">Cleanser</p>
+                    <p class="footer-link mb-0">Moisturizer</p>
+
+                </div>
+
+
+                <!-- CONTACT -->
+                <div class="col-lg-3 col-md-6 col-12">
+
+                    <h3 class="footer-heading mb-4">
+                        Contact
+                    </h3>
+
+                    <p class="footer-link mb-4">
+                        123 Demo St, San Francisco,<br>
+                        CA 45678, United States
+                    </p>
+
+                    <p class="footer-link mb-2">
+                        +1 123 456 7890
+                    </p>
+
+                    <p class="footer-link mb-0">
+                        mail@example.com
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- COPYRIGHT -->
+
+        <div class="footer-copyright text-center">
+
+            <p class="mb-0">
+                © 2026 Skin Cleanser Store. Powered by Skin Cleanser Store.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <!-- ================= CART OVERLAY ================= -->
+
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+
+    <!-- ================= CART DRAWER ================= -->
+
+    <aside id="cartDrawer" class="cart-drawer" aria-label="Shopping cart">
+
+        <div class="free-shipping">
+
+            You're
+            <span id="freeShippingAmount">$0.00</span>
+            away from free shipping!
+
+        </div>
+
+
+        <!-- CART HEADER -->
+
+        <div class="cart-header">
+
+            <button type="button" id="closeCart" aria-label="Close cart" class="btn p-0 border-0 bg-transparent fs-2">
+
+                <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+
+            <h2>Review Your Cart</h2>
+
+
+            <span id="cartDrawerCount" class="badge bg-light text-dark fs-6">
+
+                0
+
+            </span>
+
+        </div>
+
+
+        <!-- CART PRODUCTS -->
+
+        <div id="cartItems" class="cart-items">
+
+        </div>
+
+
+        <!-- SUBTOTAL -->
+
+        <div class="summary-row py-1 px-3">
+
+            <span>Subtotal</span>
+
+            <strong id="cartSubtotal">
+                $0.00
+            </strong>
+
+        </div>
+
+        <!-- TOTAL -->
+
+        <div class="summary-row total py-1 px-3">
+
+            <span>Total</span>
+
+            <strong id="cartTotal">
+                $0.00
+            </strong>
+
+        </div>
+
+        <!-- CHECKOUT -->
+
+        <a href="checkout.html" class="btn text-white fw-bold py-2 rounded-2 mb-3 d-block mx-3" style="background-color:#ff4778;
+        font-size:18px;
+        width:calc(100% - 30px);">
+
+            Proceed to Checkout →
+
+        </a>
+
+    </aside>
+    <!-- Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Your JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

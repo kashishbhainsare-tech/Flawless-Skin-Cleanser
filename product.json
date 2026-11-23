@@ -1,0 +1,266 @@
+[
+    {
+        "id": 1,
+        "category": "Cleanser",
+        "name": "Hybrid Cleansing Balm",
+        "price": "$32.90",
+        "image": "images/products/product-1.jpg",
+        "description": "A gentle cleansing balm that removes makeup, dirt and impurities while leaving the skin feeling soft, clean and hydrated.",
+        "rating": 4.8,
+        "reviewCount": 24,
+        "reviews": [
+            {
+                "name": "Sarah",
+                "rating": 5,
+                "comment": "Very gentle and effective cleanser. My skin feels soft after using it."
+            },
+            {
+                "name": "Emma",
+                "rating": 5,
+                "comment": "It removes makeup easily without making my skin dry."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "category": "Sunscreens",
+        "name": "Soothing Sunscreen Gel",
+        "price": "$24.50",
+        "image": "images/products/product-2.jpg",
+        "description": "A lightweight sunscreen gel that helps protect the skin from daily sun exposure while keeping it fresh and comfortable.",
+        "rating": 4.7,
+        "reviewCount": 19,
+        "reviews": [
+            {
+                "name": "Olivia",
+                "rating": 5,
+                "comment": "Very lightweight and comfortable on my skin."
+            },
+            {
+                "name": "Mia",
+                "rating": 4,
+                "comment": "Good sunscreen with a smooth gel texture."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "category": "Body lotion",
+        "name": "Energizing Marine Lotion",
+        "price": "$20.50",
+        "image": "images/products/product-3.jpg",
+        "description": "A refreshing body lotion designed to nourish dry skin and leave it feeling smooth, soft and refreshed.",
+        "rating": 4.6,
+        "reviewCount": 16,
+        "reviews": [
+            {
+                "name": "Sophia",
+                "rating": 5,
+                "comment": "The lotion feels light and absorbs quickly."
+            },
+            {
+                "name": "Ava",
+                "rating": 4,
+                "comment": "Leaves my skin feeling moisturized throughout the day."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "category": "Bundles",
+        "name": "Calm Hydrating Moisturizer",
+        "price": "$29.90 – $34.90",
+        "image": "images/products/product-4.jpg",
+        "description": "A calming moisturizer that provides long-lasting hydration and helps keep the skin feeling soft, smooth and comfortable.",
+        "rating": 4.9,
+        "reviewCount": 31,
+        "reviews": [
+            {
+                "name": "Isabella",
+                "rating": 5,
+                "comment": "My skin feels very hydrated and comfortable after using it."
+            },
+            {
+                "name": "Emily",
+                "rating": 5,
+                "comment": "A lovely moisturizer for my daily skincare routine."
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "category": "Cleanser",
+        "name": "Makeup Melting Cleanser",
+        "price": "$29.90",
+        "image": "images/products/product-5.jpg",
+        "description": "A nourishing cleanser that gently melts away makeup, excess oil and daily impurities without leaving the skin feeling tight.",
+        "rating": 4.7,
+        "reviewCount": 22,
+        "reviews": [
+            {
+                "name": "Amelia",
+                "rating": 5,
+                "comment": "Removes makeup really well and feels gentle."
+            },
+            {
+                "name": "Charlotte",
+                "rating": 4,
+                "comment": "Nice texture and easy to wash off."
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "category": "Cleanser",
+        "name": "Balancing Daily Cleanser",
+        "price": "$34.90",
+        "image": "images/products/product-6.jpg",
+        "description": "A daily cleanser formulated to gently remove impurities while helping the skin maintain a clean and balanced feel.",
+        "rating": 4.8,
+        "reviewCount": 27,
+        "reviews": [
+            {
+                "name": "Grace",
+                "rating": 5,
+                "comment": "Perfect for my daily skincare routine."
+            },
+            {
+                "name": "Chloe",
+                "rating": 5,
+                "comment": "Cleans my skin without making it feel dry."
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "category": "Moisturizer",
+        "name": "Hydrating Gel Oil",
+        "price": "$20.00",
+        "image": "images/products/product-7.jpg",
+        "description": "A lightweight gel-oil moisturizer that provides comfortable hydration and leaves the skin feeling soft and smooth.",
+        "rating": 4.6,
+        "reviewCount": 14,
+        "reviews": [
+            {
+                "name": "Ella",
+                "rating": 5,
+                "comment": "Lightweight and comfortable on my skin."
+            },
+            {
+                "name": "Lily",
+                "rating": 4,
+                "comment": "Good moisturizer with a smooth texture."
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "category": "Cleanser",
+        "name": "Cleanser Concentrate",
+        "price": "$30.00",
+        "image": "images/products/product-8.jpg",
+        "description": "A concentrated cleanser that gently removes dirt and impurities while helping the skin feel fresh and clean.",
+        "rating": 4.7,
+        "reviewCount": 18,
+        "reviews": [
+            {
+                "name": "Hannah",
+                "rating": 5,
+                "comment": "A little product goes a long way."
+            },
+            {
+                "name": "Lucy",
+                "rating": 4,
+                "comment": "Leaves my skin feeling fresh and clean."
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "category": "Moisturizer",
+        "name": "Antigaging Skin Oil",
+        "price": "$44.90",
+        "image": "images/products/product-10.jpg",
+        "description": "A nourishing skin oil designed to provide moisture and leave the skin looking smooth, soft and naturally radiant.",
+        "rating": 4.9,
+        "reviewCount": 29,
+        "reviews": [
+            {
+                "name": "Victoria",
+                "rating": 5,
+                "comment": "Leaves my skin looking smooth and glowing."
+            },
+            {
+                "name": "Sophie",
+                "rating": 5,
+                "comment": "Very nourishing and comfortable to use."
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "category": "Body lotion",
+        "name": "Cream to Foam Lotion",
+        "price": "$18.90",
+        "image": "images/products/product-4.jpg",
+        "description": "A soft cream-to-foam formula that gently cleanses and refreshes the skin while maintaining a comfortable feel.",
+        "rating": 4.5,
+        "reviewCount": 12,
+        "reviews": [
+            {
+                "name": "Zoe",
+                "rating": 5,
+                "comment": "The texture is really nice and easy to use."
+            },
+            {
+                "name": "Nora",
+                "rating": 4,
+                "comment": "Gentle and refreshing on the skin."
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "category": "Sunscreens",
+        "name": "Complex Sunscreen Balm",
+        "price": "$22.50",
+        "image": "images/products/product-11.jpg",
+        "description": "A nourishing sunscreen balm that helps protect the skin from everyday sun exposure while keeping it moisturized.",
+        "rating": 4.6,
+        "reviewCount": 17,
+        "reviews": [
+            {
+                "name": "Ruby",
+                "rating": 5,
+                "comment": "Easy to apply and feels comfortable."
+            },
+            {
+                "name": "Clara",
+                "rating": 4,
+                "comment": "Nice balm texture and good for daily use."
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "category": "Moisturizer",
+        "name": "Daily Glow Moisturizer",
+        "price": "$27.90 – $34.90",
+        "image": "images/products/product-9.jpg",
+        "description": "A daily moisturizer that helps keep the skin hydrated, soft and naturally glowing throughout the day.",
+        "rating": 4.8,
+        "reviewCount": 26,
+        "reviews": [
+            {
+                "name": "Maya",
+                "rating": 5,
+                "comment": "Makes my skin feel soft and hydrated."
+            },
+            {
+                "name": "Anna",
+                "rating": 5,
+                "comment": "I really like the lightweight feel and glow."
+            }
+        ]
+    }
+]
