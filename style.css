@@ -1091,6 +1091,13 @@ textarea.form-control {
 
     cursor: pointer;
 }
+#closeCart {
+    width: auto;
+    height: auto;
+    background: transparent;
+    border: none;
+    color: #000000;
+}
 
 /* =========================================================
    CART ITEMS
