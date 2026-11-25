@@ -1,3 +1,4 @@
+
 let products = [];
 let currentProduct = null;
 
@@ -5,7 +6,18 @@ let currentProduct = null;
    LOAD PRODUCT JSON
 ========================================================= */
 
-fetch("product.json")
+let params = new URLSearchParams(window.location.search);
+
+let productId = params.get("id");
+let source = params.get("source") || "home";
+
+let jsonFile = "product.json";
+
+if (source === "shop") {
+    jsonFile = "shop.json";
+}
+
+fetch(jsonFile)
     .then(function(response) {
         return response.json();
     })
@@ -27,10 +39,6 @@ fetch("product.json")
 ========================================================= */
 
 function loadProduct() {
-
-    let params = new URLSearchParams(window.location.search);
-
-    let productId = params.get("id");
 
     if (!productId) {
         console.log("Product ID not found");
@@ -157,10 +165,7 @@ function loadProduct() {
 
         addButton.type = "button";
 
-
         addButton.addEventListener("click", function(event) {
-
-            /* Stop any link/form navigation */
 
             event.preventDefault();
             event.stopPropagation();

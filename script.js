@@ -48,7 +48,7 @@ function showNewArrivals() {
 
                     <!-- PRODUCT IMAGE -->
 
-                    <a href="product.html?id=${product.id}">
+                    <a href="product.html?id=${product.id}&source=index">
 
                         <img
                             src="${product.image}"
@@ -105,7 +105,7 @@ function showNewArrivals() {
                 <h6 class="fw-normal mb-2">
 
                     <a
-                        href="product.html?id=${product.id}"
+                        href="product.html?id=${product.id}&source=index"
                         class="text-dark text-decoration-none">
 
                         ${product.name}
@@ -155,7 +155,7 @@ function showMostLoved() {
 
                     <!-- PRODUCT IMAGE -->
 
-                    <a href="product.html?id=${product.id}">
+                    <a href="product.html?id=${product.id}&source=index">
 
                         <img
                             src="${product.image}"
@@ -212,7 +212,7 @@ function showMostLoved() {
                 <h6 class="fw-normal mb-2">
 
                     <a
-                        href="product.html?id=${product.id}"
+                        href="product.html?id=${product.id}&source=index"
                         class="text-dark text-decoration-none">
 
                         ${product.name}
@@ -325,12 +325,10 @@ function addToCart(id) {
 
     let cart = getCart();
 
-
     let existing =
         cart.find(
             item => item.id == id
         );
-
 
     if (existing) {
 
@@ -606,7 +604,7 @@ function renderCart() {
 
                         <button
                             type="button"
-                             class="remove-cart-item""
+                            class="remove-cart-item"
                             onclick="removeFromCart('${item.id}')">
 
                             REMOVE
@@ -852,6 +850,7 @@ document.addEventListener(
                 openCartDrawer
             );
         }
+
         /* ================= CART BUTTON ================= */
 
         let cartBtn =
@@ -876,9 +875,17 @@ document.addEventListener(
 
     }
 );
+
+/* =====================================================
+   UPDATE NAVBAR CART
+===================================================== */
+
 function updateNavbarCart() {
 
-    let cart = JSON.parse(localStorage.getItem("flawlessCart")) || [];
+    let cart =
+        JSON.parse(
+            localStorage.getItem("flawlessCart")
+        ) || [];
 
     let total = 0;
     let count = 0;
@@ -896,13 +903,53 @@ function updateNavbarCart() {
 
     });
 
-    document.getElementById("cartPrice").textContent =
-        "$" + total.toFixed(2);
+    let cartPrice =
+        document.getElementById("cartPrice");
 
-    document.getElementById("cartCount").textContent = count;
+    let cartCount =
+        document.getElementById("cartCount");
+
+    if (cartPrice) {
+
+        cartPrice.textContent =
+            "$" + total.toFixed(2);
+
+    }
+
+    if (cartCount) {
+
+        cartCount.textContent = count;
+
+    }
+
 }
-updateNavbarCart();
 
-document.getElementById("cartPrice").addEventListener("click", function () {
-    document.getElementById("cartBtn").click();
-});
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        updateNavbarCart();
+
+        let cartPrice =
+            document.getElementById("cartPrice");
+
+        if (cartPrice) {
+
+            cartPrice.addEventListener(
+                "click",
+                function () {
+
+                    let cartBtn =
+                        document.getElementById("cartBtn");
+
+                    if (cartBtn) {
+                        cartBtn.click();
+                    }
+
+                }
+            );
+
+        }
+
+    }
+);

@@ -1,3 +1,4 @@
+
 let products = [];
 let currentProducts = [];
 
@@ -23,6 +24,8 @@ fetch("shop.json")
         showProducts(currentProducts);
 
         updateCartCount();
+
+        updateNavbarCart();
 
         /* SORTING */
 
@@ -91,7 +94,7 @@ function showProducts(productList) {
                 <div class="position-relative product-card">
 
                     <a
-                        href="product.html?id=${product.id}"
+                        href="product.html?id=${product.id}&source=shop"
                         class="text-decoration-none">
 
                         <img
@@ -142,7 +145,7 @@ function showProducts(productList) {
                 </div>
 
                 <a
-                    href="product.html?id=${product.id}"
+                    href="product.html?id=${product.id}&source=shop"
                     class="text-decoration-none text-dark">
 
                     <p
@@ -422,6 +425,7 @@ function sortProducts(value) {
         );
 
     }
+
     /* RATING */
 
     else if (value === "rating") {
@@ -433,6 +437,7 @@ function sortProducts(value) {
         );
 
     }
+
     /* LATEST */
 
     else if (value === "latest") {
@@ -444,6 +449,7 @@ function sortProducts(value) {
         );
 
     }
+
     /* PRICE LOW TO HIGH */
 
     else if (value === "price-low") {
@@ -455,6 +461,7 @@ function sortProducts(value) {
         );
 
     }
+
     /* PRICE HIGH TO LOW */
 
     else if (value === "price-high") {
@@ -518,6 +525,7 @@ if (minPrice) {
                 minPriceText.textContent =
                     minPrice.value;
             }
+
         }
     );
 
@@ -546,9 +554,12 @@ if (maxPrice) {
 
                 maxPriceText.textContent =
                     maxPrice.value;
+
             }
+
         }
     );
+
 }
 
 /* =========================================================
@@ -585,6 +596,7 @@ if (filterBtn) {
                             price >= min &&
                             price <= max
                         );
+
                     }
                 );
 
@@ -593,8 +605,10 @@ if (filterBtn) {
             showProducts(
                 currentProducts
             );
+
         }
     );
+
 }
 
 /* =========================================================
@@ -652,6 +666,7 @@ function addToCart(id) {
             quantity: 1
 
         });
+
     }
 
     localStorage.setItem(
@@ -660,6 +675,8 @@ function addToCart(id) {
     );
 
     updateCartCount();
+
+    updateNavbarCart();
 
     renderCart();
 
@@ -699,6 +716,7 @@ function updateCartCount() {
 
         cartCount.textContent =
             count;
+
     }
 
     let cartDrawerCount =
@@ -710,7 +728,9 @@ function updateCartCount() {
 
         cartDrawerCount.textContent =
             count;
+
     }
+
 }
 
 /* =========================================================
@@ -734,6 +754,7 @@ function openCartDrawer() {
         cartDrawer.classList.add(
             "open"
         );
+
     }
 
     if (cartOverlay) {
@@ -988,7 +1009,9 @@ function renderCart() {
 
         cartDrawerCount.textContent =
             totalQuantity;
+
     }
+
 }
 
 /* =========================================================
@@ -1023,6 +1046,8 @@ function increaseQuantity(id) {
 
     updateCartCount();
 
+    updateNavbarCart();
+
     renderCart();
 
 }
@@ -1056,7 +1081,9 @@ function decreaseQuantity(id) {
                 cart.filter(
                     item => item.id != id
                 );
+
         }
+
     }
 
     localStorage.setItem(
@@ -1066,7 +1093,10 @@ function decreaseQuantity(id) {
 
     updateCartCount();
 
+    updateNavbarCart();
+
     renderCart();
+
 }
 
 /* =========================================================
@@ -1094,11 +1124,69 @@ function removeFromCart(id) {
 
     updateCartCount();
 
+    updateNavbarCart();
+
     renderCart();
 
 }
+
 /* =========================================================
-   CLOSE BUTTON + OVERLAY
+   UPDATE NAVBAR CART
+========================================================= */
+
+function updateNavbarCart() {
+
+    let cart =
+        JSON.parse(
+            localStorage.getItem(
+                "flawlessCart"
+            )
+        ) || [];
+
+    let total = 0;
+    let count = 0;
+
+    cart.forEach(function (item) {
+
+        let price =
+            parseFloat(
+                String(item.price)
+                    .replace(/[^0-9.]/g, "")
+            ) || 0;
+
+        let quantity =
+            Number(item.quantity) || 1;
+
+        total += price * quantity;
+
+        count += quantity;
+
+    });
+
+    let cartPrice =
+        document.getElementById("cartPrice");
+
+    let cartCount =
+        document.getElementById("cartCount");
+
+    if (cartPrice) {
+
+        cartPrice.textContent =
+            "$" + total.toFixed(2);
+
+    }
+
+    if (cartCount) {
+
+        cartCount.textContent =
+            count;
+
+    }
+
+}
+
+/* =========================================================
+   CLOSE BUTTON + OVERLAY + CART BUTTON
 ========================================================= */
 
 document.addEventListener(
@@ -1133,23 +1221,6 @@ document.addEventListener(
 
         }
 
-        /* LOAD EXISTING CART */
-
-        updateCartCount();
-
-        renderCart();
-
-    }
-);
-
-/* =========================================================
-   CART BUTTON
-========================================================= */
-
-document.addEventListener(
-    "DOMContentLoaded",
-    function () {
-
         let cartBtn =
             document.getElementById(
                 "cartBtn"
@@ -1159,44 +1230,45 @@ document.addEventListener(
 
             cartBtn.addEventListener(
                 "click",
+                openCartDrawer
+            );
+
+        }
+
+        let cartPrice =
+            document.getElementById(
+                "cartPrice"
+            );
+
+        if (cartPrice) {
+
+            cartPrice.addEventListener(
+                "click",
                 function () {
 
-                    openCartDrawer();
+                    let cartBtn =
+                        document.getElementById(
+                            "cartBtn"
+                        );
+
+                    if (cartBtn) {
+
+                        cartBtn.click();
+
+                    }
 
                 }
             );
 
         }
 
+        /* LOAD EXISTING CART */
+
+        updateCartCount();
+
+        updateNavbarCart();
+
+        renderCart();
+
     }
 );
-function updateNavbarCart() {
-
-    let cart = JSON.parse(localStorage.getItem("flawlessCart")) || [];
-
-    let total = 0;
-    let count = 0;
-
-    cart.forEach(function (item) {
-
-        let price = parseFloat(
-            String(item.price).replace(/[^0-9.]/g, "")
-        );
-
-        let quantity = Number(item.quantity) || 1;
-
-        total += price * quantity;
-        count += quantity;
-
-    });
-
-    document.getElementById("cartPrice").textContent =
-        "$" + total.toFixed(2);
-
-    document.getElementById("cartCount").textContent = count;
-}
-updateNavbarCart();
-
-document.getElementById("cartPrice").addEventListener("click", function () {
-    document.getElementById("cartBtn").click();
-});
